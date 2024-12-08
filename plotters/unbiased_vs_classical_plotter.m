@@ -1,7 +1,7 @@
 clc; clear;
 
 % Prompt the user to select a .mat file from the "data-logging" directory
-[filename, pathname] = uigetfile('./*.mat', 'Select an unbiased seeking MAT file');
+[filename, pathname] = uigetfile('../../data/*.mat', 'Select an unbiased seeking MAT file');
 if isequal(filename, 0)
     disp('User selected Cancel');
     return;
@@ -12,7 +12,7 @@ end
 unbiased_data = load(filepath);
 
 % Prompt the user to select a .mat file from the "data-logging" directory
-[filename, pathname] = uigetfile('./*.mat', 'Select a classical seeking MAT file');
+[filename, pathname] = uigetfile('../../data/*.mat', 'Select a classical seeking MAT file');
 if isequal(filename, 0)
     disp('User selected Cancel');
     return;
@@ -23,7 +23,7 @@ end
 classical_data = load(filepath);
 
 % Prompt the user to select a .mat file from the "pv-curve-data" directory
-[filename, pathname] = uigetfile('./*.mat', 'Select a pv curve MAT file');
+[filename, pathname] = uigetfile('../../data/*.mat', 'Select a pv curve MAT file');
 if isequal(filename, 0)
     disp('User selected Cancel');
     return;
